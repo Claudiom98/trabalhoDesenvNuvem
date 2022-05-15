@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
+const calculadora = require("./calculadora");
+
 router.get("/", function(req, res){
     res.sendFile(__dirname + "/src/index.html");
 });
@@ -21,6 +23,18 @@ router.get("/arearetangulo", function(req, res){
     let base = req.query.base;
     let altura = req.query.altura;
     res.send(`A área do retângulo é: ${base * altura}`)
+})
+
+router.get("/soma", function(req, res){
+    let a = parseInt(req.query.oper1);
+    let b = parseInt(req.query.oper2);
+    res.send(`O resultado da soma é ${calculadora.soma(a, b)}`)
+})
+
+router.get("/subtracao", function(req, res){
+    let a = parseInt(req.query.oper1);
+    let b = parseInt(req.query.oper2);
+    res.send(`O resultado da subtração é ${calculadora.subtracao(a, b)}`)
 })
 
 module.exports = router;
