@@ -6,7 +6,11 @@ router.get("/", function(req, res){
 });
 
 router.get("/users", function(req, res){
-    res.send("Listar usuários")
+    res.send("Lista todos os usuários")
+});
+
+router.get("/user", function(req, res){
+    res.send("Inclui um usuário")
 });
 
 module.exports = router;
