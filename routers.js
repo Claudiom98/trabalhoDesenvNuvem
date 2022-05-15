@@ -37,4 +37,15 @@ router.get("/subtracao", function(req, res){
     res.send(`O resultado da subtração é ${calculadora.subtracao(a, b)}`)
 })
 
+router.get("/mult", function(req, res){
+    let a = parseInt(req.query.oper1);
+    let b = parseInt(req.query.oper2);
+    res.send(`O resultado da multiplicação é ${calculadora.mult(a, b)}`)
+})
+
+router.get("/div", function(req, res){
+    let a = parseInt(req.query.oper1);
+    let b = parseInt(req.query.oper2);
+    res.send(`O resultado da divisão é ${calculadora.div(a, b)}`)
+})
 module.exports = router;
