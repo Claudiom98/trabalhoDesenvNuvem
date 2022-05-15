@@ -8,6 +8,22 @@ router.get("/", function(req, res){
     res.sendFile(__dirname + "/src/index.html");
 });
 
+router.get("/verao", function(req, res){
+    res.sendFile(__dirname + "/4seasons/summer.html");
+});
+
+router.get("/primavera", function(req, res){
+    res.sendFile(__dirname + "/4seasons/spring.html");
+});
+
+router.get("/inverno", function(req, res){
+    res.sendFile(__dirname + "/4seasons/winter.html");
+});
+
+router.get("/outono", function(req, res){
+    res.sendFile(__dirname + "/4seasons/autumn.html");
+});
+
 router.get("/users", function(req, res){
     res.send("Lista todos os usuários")
 });
