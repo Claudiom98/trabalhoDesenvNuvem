@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const calculadora = require("./calculadora");
+const circulo = require("./circulo");
 
 router.get("/", function(req, res){
     res.sendFile(__dirname + "/src/index.html");
@@ -47,5 +48,15 @@ router.get("/div", function(req, res){
     let a = parseInt(req.query.oper1);
     let b = parseInt(req.query.oper2);
     res.send(`O resultado da divisão é ${calculadora.div(a, b)}`)
+})
+
+router.get("/circunferencia", function(req, res){
+    let r = parseInt(req.query.raio);
+    res.send(`A circunferência é ${circulo.circunferencia(r)}`)
+})
+
+router.get("/areacirculo", function(req, res){
+    let r = parseInt(req.query.raio);
+    res.send(`A area do circulo é ${circulo.area(r)}`)
 })
 module.exports = router;
