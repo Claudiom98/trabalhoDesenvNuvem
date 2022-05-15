@@ -1,0 +1,22 @@
+{
+  "name": "trabalhodesenvnuvem",
+  "version": "1.0.0",
+  "description": "Trabalho da disciplina de Desenv. em Nuvem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glauberfernandes/trabalhoDesenvNuvem.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glauberfernandes/trabalhoDesenvNuvem/issues"
+  },
+  "homepage": "https://github.com/glauberfernandes/trabalhoDesenvNuvem#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
