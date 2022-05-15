@@ -17,10 +17,10 @@ router.get("/user/:id", function(req, res){
     res.send(`Edita o usuário ${req.params.id}`)
 })
 
-router.get("/areaquadrado", function(req, res){
+router.get("/arearetangulo", function(req, res){
     let base = req.query.base;
     let altura = req.query.altura;
-    res.send(`A área do quadrado é: ${base * altura}`)
+    res.send(`A área do retângulo é: ${base * altura}`)
 })
 
 module.exports = router;
