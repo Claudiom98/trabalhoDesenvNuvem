@@ -13,4 +13,8 @@ router.get("/user", function(req, res){
     res.send("Inclui um usuário")
 });
 
+router.get("/user/:id", function(req, res){
+    res.send("Edita o usuário " + req.params.id)
+})
+
 module.exports = router;
