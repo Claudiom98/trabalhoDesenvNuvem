@@ -42,16 +42,29 @@
         </div>
     </nav>
 
-    <div style="display:inline-block;vertical-align:top;">
-        <img src="img/nuvensHotel.jpg" alt="img" />
-    </div>
-    <div style="display:inline-block;">
-        <p class="text-justify">
-        <h1>Esta é a página principal do Nuvens Hotel.</h1>
-        </p>
-    </div>
+    <section>
+        <div class="container mt-2">
+            <h2>simulador</h2>
+            <form action="/simulacao">
+                <div class="mb-3 mt-3">
+                    <label for="dias">Quantidade de dias:</label>
+                    <input type="number" class="form-control" id="dias" placeholder="Informe a quantidade de dias" name="dias" required>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="adultos">Quantidade de adultos:</label>
+                    <input type="number" class="form-control" id="adultos" placeholder="Informe a quantidade de adultos" name="adultos" required>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="criancas">Quantidade de crianças:</label>
+                    <input type="number" class="form-control" id="criancas" placeholder="Informe a quantidade de crianças" name="criancas" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+    <br>
 
-    <footer class="footer navbar-dark fixed-bottom">
+    <footer class="footer navbar-dark">
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2022 Copyright:
             Claudio Moises(2010396) e Glauber Fernandes(1813382)

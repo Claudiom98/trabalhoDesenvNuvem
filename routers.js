@@ -4,9 +4,37 @@ const router = express.Router();
 const calculadora = require("./calculadora");
 const circulo = require("./circulo");
 
+const functions = require("./src/js/functions");
+
 router.get("/", function(req, res){
     res.sendFile(__dirname + "/src/index.html");
 });
+
+router.get("/cadastro", function(req, res){
+    res.sendFile(__dirname + "/src/pages/cadastro.html");
+});
+
+router.get("/simulador", function(req, res){
+    res.sendFile(__dirname + "/src/pages/simulador.html");
+});
+
+router.get("/estacoes", function(req, res){
+    res.sendFile(__dirname + "/src/pages/estacoes.html");
+});
+
+router.get("/sobre", function(req, res){
+    res.sendFile(__dirname + "/src/pages/sobre.html");
+});
+
+router.get("/sobre", function(req, res){
+    res.sendFile(__dirname + "/src/pages/sobre.html");
+});
+
+router.get("/avisoCadastro", function(req, res){
+    let name = req.query.name;
+    let email = req.query.email;
+    functions.enviarFormulario(name, email);
+})
 
 router.get("/verao", function(req, res){
     res.sendFile(__dirname + "/4seasons/summer.html");
