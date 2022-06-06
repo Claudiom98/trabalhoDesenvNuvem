@@ -36,6 +36,16 @@ router.get("/avisoCadastro", function(req, res){
     functions.enviarFormulario(name, email);
 })
 
+router.get("/simulacao", function(req, res){
+    let qtdDias = req.query.dias;
+    let qtdAdultos = req.query.adultos;
+    let qtdCriancas = req.query.criancas;
+    let totalGeral = functions.calcularSimulacao(qtdDias, qtdAdultos, qtdCriancas);
+
+    res.send(`O total da sua estadia será de R$ ${totalGeral}.`);
+})
+
+
 router.get("/verao", function(req, res){
     res.sendFile(__dirname + "/4seasons/summer.html");
 });
